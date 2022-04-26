@@ -125,8 +125,8 @@ You can quickly test your code on codesandbox.io o replit.com
 ##### Resources
 
 - General references for Javascript: https://www.w3schools.com/js/
-
-- Lab repository: https://github.com/unitn-software-engineering/2022-se-lab.git
+- General references for Node.js: https://nodejs.org/en/docs/
+- Lab repository: https://github.com/unitn-software-engineering/2022-se-lab/
 
 ---
 
@@ -436,15 +436,20 @@ Functions: n18 - https://www.w3resource.com/javascript-exercises/javascript-func
 
 ---
 
-# Advanced - Node.js
-
-> [***Node.js***](https://nodejs.org/en/) is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js uses an **event-driven**, **single threaded**, **non-blocking I/O model** that makes it lightweight and efficient, perfect **for data-intensive real-time applications** that run across distributed devices.
+# Advanced
 
 ---
 
 # Node.js
 
-Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+[***Node.js***](https://nodejs.org/en/) is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js uses an **event-driven**, **single threaded**, **non-blocking I/O model** that makes it lightweight and efficient, perfect **for data-intensive real-time applications** that run across distributed devices.
+
+> https://nodejs.org/en/docs/guides/
+> https://www.w3schools.com/nodejs/default.asp
+
+---
+
+# Installing Node.js
 
 You can install Node.js by following the instructions from the Node.js project webpage ([https://nodejs.org/en/](https://nodejs.org/en/)).
 
@@ -797,6 +802,8 @@ asyncExample();
 ---
 
 # Package mangement
+
+> https://docs.npmjs.com/getting-started/what-is-npm
 
 ---
 
