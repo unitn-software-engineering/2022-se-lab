@@ -112,7 +112,7 @@ AJAX ha reso possibile la transizione verso il web 2.0. Definisce un *pattern st
 - Git CLI (https://git-scm.com/downloads)
 - github.com - it is possible to have a pro account with the @unitn email)
 
-You can quickly test your code on codesandbox.io o replit.com
+You can quickly test your code on codesandbox.io or replit.com
 
 ---
 

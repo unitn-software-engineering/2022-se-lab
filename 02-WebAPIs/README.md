@@ -172,6 +172,29 @@ app.post('/subscribe', function(req, res){
 
 ---
 
+## The response object
+
+```javascript
+// text of html
+res.send('text')
+// json
+res.json({ user: 'tobi' })
+// status code
+res.sendStatus(404)
+// chainable status code
+res.status(404).sendFile('/absolute/path/to/404.png')
+```
+
+> https://expressjs.com/it/api.html#res
+
+#### What about HTTP status codes?
+
+1xx: Informational; 2xx: Success; 3xx: Redirection; 4xx: Client Error; 5xx: Server Error
+
+> https://restfulapi.net/http-status-codes/
+
+---
+
 ## Using Postman to test our web server
 
 > https://www.postman.com/
@@ -285,29 +308,6 @@ You can decide where the static files will be served, by simply specifying the r
 ```javascript
 app.use('/static', express.static('public'));
 ```
-
----
-
-## The response object
-
-```javascript
-// text of html
-res.send('text')
-// json
-res.json({ user: 'tobi' })
-// status code
-res.sendStatus(404)
-// chainable status code
-res.status(404).sendFile('/absolute/path/to/404.png')
-```
-
-> https://expressjs.com/it/api.html#res
-
-#### What about HTTP status codes?
-
-1xx: Informational; 2xx: Success; 3xx: Redirection; 4xx: Client Error; 5xx: Server Error
-
-> https://restfulapi.net/http-status-codes/
 
 ---
 
