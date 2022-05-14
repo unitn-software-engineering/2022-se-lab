@@ -33,7 +33,6 @@ Software Engineering, 2nd part - Lab
 
 # Contents of today class
 
-- Versioning and collaboration with [Git](https://git-scm.com/) and [Github.com](https://github.com/) - 2nd part
 - [MongoDB](www.mongodb.com) and [Mongoose](https://mongoosejs.com/)
 
 > Lab teaching material: github.com/unitn-software-engineering/2022-se-lab.git
@@ -197,6 +196,50 @@ await doc.save();
 
 ---
 
+# Subdocuments versus Nested Paths
+
+> https://mongoosejs.com/docs/subdocs.html#subdocuments-versus-nested-paths
+
+```javascript
+// Subdocument
+const subdocumentSchema = new mongoose.Schema({
+  child: new mongoose.Schema({ name: String, age: Number })
+});
+const Subdoc = mongoose.model('Subdoc', subdocumentSchema);
+
+// Nested path
+const nestedSchema = new mongoose.Schema({
+  child: { name: String, age: Number }
+});
+const Nested = mongoose.model('Nested', nestedSchema);
+```
+
+---
+
+# Populate
+
+> https://mongoosejs.com/docs/populate.html
+
+```javascript
+const personSchema = Schema({
+  _id: Schema.Types.ObjectId,
+  name: String,
+  stories: [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+});
+const storySchema = Schema({
+  author: { type: Schema.Types.ObjectId, ref: 'Person' },
+  title: String,
+  fans: [{ type: Schema.Types.ObjectId, ref: 'Person' }]
+});
+const Story = mongoose.model('Story', storySchema);
+const Person = mongoose.model('Person', personSchema);
+
+Story.findOne({ title: 'Casino Royale' })
+.populate('author').exec(function (err, story) { ... });
+```
+
+---
+
 # MongoDB with mongoose in EasyLib
 
 > https://github.com/unitn-software-engineering/EasyLib
@@ -296,3 +339,20 @@ app.locals.db = mongoose.connect(process.env.DB_URL,
 # Questions?
 
 marco.robol@unitn.it
+
+---
+
+# Next
+
+- Versioning and collaboration with [Git](https://git-scm.com/) and [Github.com](https://github.com/) - 2nd part
+
+#### Versioning and collaboration with Git
+
+- Resolving conflicts in 3-way merge - Quick recap
+- Collaboration - Quick recap
+- Advanced
+  - stash, rebase, tag, reset, revert
+- Undoing Commits & Changes
+  - reset, revert
+
+#### Git branching strategies

@@ -152,7 +152,9 @@ Before you proceed, there are a couple of things you probably want to do: Tell G
 
 ### Stage files (tracked and untracked)
 
-`git add .`
+`git add .` - add tracked files to staging area
+
+`git reset HEAD` - remove files from staging area - more details on this later
 
 ### Commit staged changes
 
@@ -161,7 +163,6 @@ Before you proceed, there are a couple of things you probably want to do: Tell G
 (-m: add message)  
 (-a: stage changed tracked files, but in case you have new files you need to do `git add .` to manually track them )    
 (In Vim press `Esc` and then type `:q` to quit; `:w` to save; `:x` to save and exit)
-
 
 ### Include staged changes in last commit
 
@@ -303,7 +304,26 @@ A fast-forward merge is not possible if the branches have diverged.
 
 ![w:600](3waymerge.png)
 
-Resolving conflicts in 3-way merge `git mergetool`
+---
+
+## Conflicts in 3-way merge `git mergetool`
+
+```javascript
+...
+<<<<<<< HEAD
+  "name": "branch-master",
+=======
+  "name": "new-feature",
+>>>>>>> newFeature
+  "version": "1.0.0",
+...
+```
+
+#### P4Merge visual tool `git config merge.tool p4merge`
+
+https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge
+
+#### Visual studio Code to resolve conflicts - `conflicts highlighted`
 
 ---
 
