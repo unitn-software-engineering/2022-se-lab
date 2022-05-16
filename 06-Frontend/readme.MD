@@ -34,7 +34,16 @@ Software Engineering, 2nd part - Lab
 # Contents of today class
 
 - Basic frontend with HTML, fetch() API, DOM manipulation
-- Vue.js and Vuetify components
+- Vue.js
+- EasyLib
+
+Repository:
+> EasyLib - https://github.com/unitn-software-engineering/EasyLib
+> EasyLibVue - https://github.com/unitn-software-engineering/EasyLibVue
+
+Try:
+> Basic Frontend - https://easy-lib.herokuapp.com/
+> Vue Frontend - https://unitn-software-engineering.github.io/EasyLibApp/
 
 ---
 
@@ -50,6 +59,8 @@ Software Engineering, 2nd part - Lab
 ---
 
 # EasyLib basic frontend
+
+> https://easy-lib.herokuapp.com/
 
 Nel progetto EasyLib trovate una semplice web app implementata in html + javascript.
 Le chiamate asincrone al backend sono effettuate manualmente tramite il metodo fetch(), mentre la pagina html è aggionata lavorando direttamente sul DOM della pagina html.  
@@ -215,7 +226,10 @@ https://vuejs.org/tutorial/
 ---
 
 # EasyLibVue
-> https://github.com/marcorobol/EasyLibVue.git
+
+> Repository - https://github.com/unitn-software-engineering/EasyLibVue
+
+TRY: https://unitn-software-engineering.github.io/EasyLibApp/
 
 ---
 
@@ -223,7 +237,7 @@ https://vuejs.org/tutorial/
 
 Clone EasyLibVue, or start from scratch, `npm init vue@latest` to execute create-vue.
 
-https://github.com/marcorobol/EasyLibVue/commit/c8c43e8d684817e91fd81a01074c27914899bf62 - Here is what create-vue provides us.
+https://github.com/unitn-software-engineering/EasyLibVue/commit/c8c43e8d684817e91fd81a01074c27914899bf62 - Here is what create-vue provides us.
 
 To run: `npm install` and `npm run dev`. Application will be server on port 3030.
 
@@ -431,6 +445,26 @@ async function deleteLending(lending) {...};
 
 ---
 
+# Questions?
+
+marco.robol@unitn.it
+
+---
+
+# Back up slides
+
+---
+
+## Vue.js additional pointers
+
+Qui un tutorial su come consumare servizi REST da un applicazione Vue.js: https://bezkoder.com/vue-js-crud-app/
+
+In particolare un tutorial sullo stack Vue.js + Node.js + Express + MongoDB example è presente qui: https://bezkoder.com/vue-node-express-mongodb-mevn-crud/
+
+Autenticazione con JWT: https://bezkoder.com/jwt-vue-vuex-authentication/
+
+---
+
 # Build and serve Vue app from our backend
 
 When ready to ship app to production, run the following: `npm run build`. This generates minified html+javascript frontend in `.\dist` folder. We can then serve the frontend on a dedicated server or on our API server.
@@ -449,33 +483,6 @@ app.use('/', express.static('static'));
 FRONTEND='../EasyLibVue/dist'
 ```
 `EasyLib\.env`
-
----
-
-# 
-
-```javascript
-```
-
----
-
-## Vue.js additional pointers
-
-Qui un tutorial su come consumare servizi REST da un applicazione Vue.js: https://bezkoder.com/vue-js-crud-app/
-
-In particolare un tutorial sullo stack Vue.js + Node.js + Express + MongoDB example è presente qui: https://bezkoder.com/vue-node-express-mongodb-mevn-crud/
-
-Autenticazione con JWT: https://bezkoder.com/jwt-vue-vuex-authentication/
-
----
-
-# Questions?
-
-marco.robol@unitn.it
-
----
-
-# Back up slides
 
 ---
 
