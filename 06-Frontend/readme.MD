@@ -520,5 +520,3 @@ FRONTEND='../EasyLibVue/dist'
 > https://vuetifyjs.com/en/
 
 Only for Vue 2.0
-
----
